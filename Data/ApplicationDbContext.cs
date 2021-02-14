@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using ToDoList.Models;
 
 namespace ToDoList.Data
 {
@@ -12,5 +13,6 @@ namespace ToDoList.Data
             : base(options)
         {
         }
+        public DbSet<ToDoList.Models.ToDoItem> ToDoItem { get; set; }
     }
 }
