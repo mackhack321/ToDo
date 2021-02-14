@@ -57,7 +57,7 @@ namespace ToDoList.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Description,IsComplete")] ToDoItem toDoItem)
+        public async Task<IActionResult> Create([Bind("Id,Title,Description,Author,IsComplete")] ToDoItem toDoItem)
         {
             if (ModelState.IsValid)
             {
