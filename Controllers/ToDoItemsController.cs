@@ -26,6 +26,12 @@ namespace ToDoList.Controllers
             return View(await _context.ToDoItem.ToListAsync());
         }
 
+        // GET: ToDoItems/IncompleteItems
+        public async Task<IActionResult> IncompleteItems()
+        {
+            return View(await _context.ToDoItem.Where(t => !t.IsComplete).ToListAsync());
+        }
+
         // GET: ToDoItems/Details/5
         public async Task<IActionResult> Details(int? id)
         {
